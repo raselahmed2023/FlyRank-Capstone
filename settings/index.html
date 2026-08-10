@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Settings- FlyRank</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>Settings</h1>
+
+      <form id="settingsForm" class="form" aria-describedby="form-desc" novalidate>
+        <p id="form-desc" class="sr-only">Manage your FlyRank preferences. All fields are validated.</p>
+
+        <div class="row">
+          <label for="username">Username</label>
+          <input id="username" name="username" type="text" inputmode="text" autocomplete="username" required aria-required="true" aria-describedby="username-help username-error" />
+          <div id="username-help" class="hint">At least 3 characters.</div>
+          <div id="username-error" class="error" aria-live="polite"></div>
+        </div>
+
+        <div class="row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-required="true" aria-describedby="email-error" />
+          <div id="email-error" class="error" aria-live="polite"></div>
+        </div>
+
+        <div class="row">
+          <label for="updateInterval">Update interval (minutes)</label>
+          <input id="updateInterval" name="updateInterval" type="number" min="1" max="60" step="1" value="15" required aria-describedby="updateInterval-help updateInterval-error" />
+          <div id="updateInterval-help" class="hint">Enter a number between 1 and 60.</div>
+          <div id="updateInterval-error" class="error" aria-live="polite"></div>
+        </div>
+
+        <fieldset class="row fieldset">
+          <legend class="sr-only">Preferences</legend>
+          <label class="checkbox" for="enableNotifications">
+            <input id="enableNotifications" name="enableNotifications" type="checkbox" /> Enable notifications
+          </label>
+        </fieldset>
+
+        <div class="actions">
+          <button type="submit" class="btn primary">Save</button>
+          <button type="button" id="resetBtn" class="btn">Reset</button>
+        </div>
+
+        <div id="status" role="status" aria-live="polite" class="status" ></div>
+      </form>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

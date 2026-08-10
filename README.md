@@ -18,3 +18,18 @@ A concise capstone repository for building a flight-ranking application with mod
 
 ## Notes
 This repository is prepared for an iterative development workflow, with AI-assisted coding and a professional Node.js 24 LTS setup.
+
+## Settings UI
+A production-quality settings UI is included as a small standalone frontend under the `settings` folder.
+
+- Open `settings/index.html` in a browser to try the form.
+- Uses semantic HTML, accessible labels, keyboard focus styles, and responsive layout.
+- Validation rules: `username` (min 3 chars), `email` (valid), `updateInterval` (integer 1–60 minutes).
+- Settings are saved to `localStorage` under the key `flyrank.settings`.
+
+To run the validation tests (no dependencies required):
+
+```bash
+node settings/tests/run-validation-tests.mjs
+```
+
