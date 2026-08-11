@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "check": "API Endpoint",
+    "status": "Healthy",
+    "lastUpdated": "2026-08-11 10:15 UTC"
+  },
+  {
+    "id": 2,
+    "check": "Database Connection",
+    "status": "Healthy",
+    "lastUpdated": "2026-08-11 10:10 UTC"
+  },
+  {
+    "id": 3,
+    "check": "Scheduled Jobs",
+    "status": "Running",
+    "lastUpdated": "2026-08-11 10:12 UTC"
+  }
+]
